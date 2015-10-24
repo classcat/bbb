@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+<!--
+  ClassCat(R) WebConference
+  Copyright (C) 2015 ClassCat Co.,Ltd. All rights reserved.
+-->
+<!--
+  o 12-feb-15 : 0.9.1 : a link to the moderator guide.
+  o 25-jan-15 : 0.9.0 : fixed.
+-->
+
+    <title>ClassCat&reg; WebConference - クラスキャット Web 会議</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW,NOARCHIVE">
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/ccm-favicon.png">
+    <!-- <link rel="icon" href="images/favicon.png"> -->
+
+    <link rel="stylesheet" href="css/bijou.min.css">
+    <link rel="stylesheet" href="css/ccmstyle.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+    <div class='main'>
+
+    <!-- Header -->
+    <div class='navbar' style="padding:0;background:lemonchiffon;">
+      <div class='container'>
+        <div class="logo">
+          <table border=0 width="100%">
+            <tr><td><img src="images/ccwebcon_logo_blue.png" alt="ClassCat WebConference"/>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class='container'>
+
+      <!-- Welcome Message & Login Into Demo -->
+      <div class='row'>
+        <div class='span five'>
+          <h2 style="font-weight:bold;color:black;">モデレータ</h2>
+          <p style="color:royalblue;font-weight:bold;">ClassCat&reg; WebConference は <a href="http://www.classcat.com/"><span style="text-decoration:underline;color:orange;">クラスキャット</span></a> が提供する、<br/>SoftLayer クラウド上の Web 会議マネージド・サービスです。</p>
+
+          <p style="color:#333">モデレータは、会議室の管理や会議の進行を担います。<br/>
+          このページでは、モデレータ業務に必要なサービス・メニューが用意されています。
+          </p>
+
+          <!-- モデレータ・メニュー-->
+          <img src="images/ccwebcon_mmenu.png"/>
+
+          <table style="margin-left:1pc;color:#333;" cellspacing="0" cellpadding="0">
+          <tr><td><img src="images/arrow070_02.gif"/><td width="8"><td><a href="/demo/cc-create.jsp"><span style="text-decoration:underline;font-weight:bold;color:mediumblue;">会議室の作成</span></a>
+          <tr><td><td><td><span style="margin-left:2pc;font-size:10pt;">あなたの名前をモデレータとする会議室を作成します。</span>
+          <tr><td><img src="images/arrow070_02.gif"/><td width="8"><td><a href="/demo/cc-record.jsp"><span style="text-decoration:underline;font-weight:bold;color:mediumblue;">録画可能な会議室</span></a>
+          <tr><td><td><td><span style="margin-left:2pc;font-size:10pt;">セッションの録画ができる会議室です。</span>
+          <tr><td><img src="images/arrow070_02.gif"/><td width="8"><td><a href="/demo/cc-record-list.jsp"><span style="text-decoration:underline;font-weight:bold;color:mediumblue;">録画セッションのリスト</span></a>
+          <tr><td><td><td><span style="margin-left:2pc;font-size:10pt;">録画された会議セッションのリストです。再生もできます。</span>
+          <tr><td><img src="images/arrow070_02.gif"/><td width="8"><td><a href="/demo/cc-activity-monitor.jsp"><span style="text-decoration:underline;font-weight:bold;color:mediumblue;">アクティビティ・モニタ</span></a>
+          <tr><td><td><td><span style="margin-left:2pc;font-size:10pt;">利用中の会議室のアクティビティ・モニタです。</span>
+          </table>
+          <br/>
+
+          <!-- 問合わせ -->
+          <img src="images/ccwebcon_mcontact.png"/>
+          <ul style="margin-left:2pc;color:#333">
+          <li>ご利用上の疑問点につきましては<br/>
+          下記まで電子メールでお問合わせください。
+          <div style="margin-left:2pc;font-weight:bold;color:darkblue;">
+          クラスキャット・プロダクトサポート<br/>
+          <img src="images/support.png"/>
+          </div>
+          <li>サービスのご購入につきましては<br/>
+          下記まで電子メールでお問合わせください。
+          <div style="margin-left:2pc;font-weight:bold;color:darkblue;">
+          クラスキャット・セールスインフォメーション<br/>
+          <img src="images/sales-info.png"/>
+          </div>
+          <li><span style="color:orangered;">各種無料サービスも提供中です。</span>
+          </ul>
+
+        </div>
+
+      <div class="span one"></div>
+        <div class='span six'>
+          <div class='join-metting  pull-right'>
+            <h4>ClassCat&reg; WebConference にトライ！</h4>
+            <div style="text-align:left;color:#000">Web 会議のセッションに参加しましょう。</div>
+            <br/>
+
+            <form name="form1" method="GET" onsubmit="return checkform(this);" action="/demo/demo2.jsp">
+
+              <!-- <input type="text" id="meetingID" required="" name="meetingID" placeholder="会議室名を入力してください" size="29" class="field input-default" autofocus> -->
+              <div style="text-align:left;margin-bottom:10px;">
+                <select name="meetingID" onchange="onChangeMeeting(this.value);">
+                <option value="会議室（デフォルト）" selected>会議室（デフォルト）</option>
+                <option value="会議室-101">会議室 101</option>
+                <option value="会議室-102">会議室 102</option>
+                <option value="会議室-103">会議室 103</option>
+                <option value="会議室-104">会議室 104</option>
+                <option value="レコード用会議室（デフォルト）">レコード用会議室（デフォルト）</option>
+                <option value="レコード用会議室-201">レコード用会議室 201</option>
+                <option value="レコード用会議室-202">レコード用会議室 202</option>
+                <option value="レコード用会議室-203">レコード用会議室 203</option>
+                <option value="レコード用会議室-204">レコード用会議室 204</option>
+		</select>
+              </div>
+
+              <input type="text" id="username" required="" name="username" placeholder="名前を入力してください" size="29" class="field input-default" autofocus>
+              <input type="submit" value="参加" class="submit_btn button success large"><br>
+              <input type="hidden" name="action" value="create">
+            </form>
+
+            <ul style="text-align:left;list-style:decimal;margin-left:2pc;color:#000">
+            <li>会議室を選択します。
+            <li>名前を入力します。
+            <li>「参加」ボタンをクリックします。
+            </ul>
+            <br/>
+	    <div style="text-align:left;margin:0;padding:0;color:#999">
+            ※ ページの左側に説明があります。<br/>
+            ※ 詳しい説明は <a href="http://www.classcat.com/webconf-mguide-overview/" target="_blank">モデレータガイド</a> を参照してください。<br/>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- BigBlueButton Features -->
+      <div class="bbb-features">
+	      <div class='row'>	
+	        <div class='featurette-heading'>
+	          <h2 style="color:navy;font-weight:bold;">特徴</h2>
+	        </div>
+	
+	        <div class='span four first'>
+	          <i class="fa fa-play-circle-o"></i>
+	
+	          <div class="bbb-features-content">
+	            <h3>レコード & プレイバック</h3>
+	            <p>ClassCat&reg; WebConference では後のプレイバックのためにあなたのセッションを録画できるサービスをご用意しています。</p>
+	          </div>
+	        </div>
+	
+	        <div class='span four'>
+	          <i class="fa fa-pencil-square-o"></i>
+	
+	          <div class="bbb-features-content">
+	            <h3>ホワイトボード</h3>
+	            <p>ホワイトボードであなたのプレゼンテーションの重要な部分に注釈をつけることができます。</p>
+	          </div>
+	        </div>
+	
+	        <div class='span four last'>
+	          <i class="fa fa-desktop"></i>
+	
+	          <div class="bbb-features-content">
+	            <h3>デスクトップ共有</h3>
+	            <p>あなたのデスクトップをすべてのユーザが視れるようにブロードキャストすることができます。（プレゼンターのみ、最新バージョンの Java が必要です）。</p>
+	          </div>
+	        </div>
+	      </div>
+	
+	
+	      <div class='row'>
+	        <div class='span four first'>
+	          <i class="fa fa-microphone"></i>
+	
+	          <div class="bbb-features-content">
+	            <h3>WebRTC オーディオ</h3>
+	            <p>Chrome と Firefox ブラウザのユーザは、高品質・低レイテンシの WebRTC オーディオの恩恵を受けることができます。（他のブラウザのユーザは Flash ベースのオーディオをシームレスに利用できます。）</p>
+	          </div>
+	        </div>
+	
+	        <div class='span four'>
+	          <i class="fa fa-bar-chart-o"></i>
+	
+	          <div class="bbb-features-content">
+	            <h3>プレゼンテーション</h3>
+	            <p>PDF プレゼンテーション資料や MS office の文書をアップロードできます。
+                    ClassCat&reg; WebConference はあなたの現在のスライド、ズーム、パン、注釈、そしてマウスポインタを参加者全員に同期して保持させます。</p>
+	          </div>
+	        </div>
+	
+	        <div class='span four last'>
+	          <i class="fa fa-video-camera"></i>
+	
+	          <div class="bbb-features-content">
+	            <h3>Web カメラ</h3>
+	            <p>複数のユーザで Web カメラを同時に共有できます。同時にアクティブな Web カメラの数にビルトインな制限はありません。</p>
+	          </div>
+	        </div>
+	      </div>
+      </div>
+      <hr class="featurette-divider">
+
+      </div>
+    </div>
+
+    <!--  Footer -->
+    <footer>
+      <div class='container'>
+
+	      <div class="row">
+	      	<div class="span twelve center">
+		  Copyright &copy; 2015 ClassCat&reg; Co.,Ltd. All rights reserved.
+
+	      	</div>
+	      </div>	
+      </div>
+    </footer>
+  </body>
+</html>
