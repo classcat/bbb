@@ -1,0 +1,24 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+SWAPFILENAME=/swap.img
+# MEMSIZE=`cat /proc/meminfo | grep MemTotal | awk '{print $2}'`
+# SIZE=${((MEMSIZE * 2))}k
+# SIZE=${MEMSIZE}k
+# SIZE=${((MEMSIZE / 2))}k
+# SIZE=4194304k
+SIZE=2097152k
+fallocate -l $SIZE $SWAPFILENAME && mkswap $SWAPFILENAME && swapon $SWAPFILENAME
+
+exit 0
+
