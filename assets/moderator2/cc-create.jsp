@@ -6,10 +6,11 @@ response.setCharacterEncoding("UTF-8");
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
-<%-- ClassCat(R) WebConference v1.0                            --%>
-<%-- Copyright (C) 2015 ClassCat Co.,Ltd. All rights reserved. --%>
+<%-- ClassCat(R) WebConference v1.0                                   --%>
+<%-- Copyright (C) 2015 - 2016 ClassCat Co.,Ltd. All rights reserved. --%>
 
-<%-- 25-Jan-15 : 0.9.0 Fixed. --%>
+<%-- 21-may-15 : 0.1.0 : for https. --%>
+<%-- 25-Jan-15 : 0.9.0 : Fixed. --%>
 
 <head>
 
@@ -431,7 +432,9 @@ function mycallback() {
 		// the meeting was created.
 		String joinURL = getJoinURLViewer(request.getParameter("username"), request.getParameter("meetingID"));
 			
-		if (joinURL.startsWith("http://")) {
+		// classcat : 21-may-16
+		if (joinURL.startsWith("http://") || joinURL.startsWith("https://")) { 
+		// if (joinURL.startsWith("http://")) {
 %>
 
 <script language="javascript" type="text/javascript">

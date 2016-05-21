@@ -6,10 +6,11 @@ response.setCharacterEncoding("UTF-8");
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
-<%-- ClassCat(R) WebConference v1.0                            --%>
-<%-- Copyright (C) 2015 ClassCat Co.,Ltd. All rights reserved. --%>
+<%-- ClassCat(R) WebConference v1.0                                   --%>
+<%-- Copyright (C) 2015 - 2016 ClassCat Co.,Ltd. All rights reserved. --%>
 
-<%-- 25-Jan-15 : 0.9.0 Fixed. --%>
+<%-- 21-may-15 : 0.1.0 : for https. --%>
+<%-- 25-Jan-15 : 0.9.0 : Fixed. --%>
 
 <head>
 
@@ -189,7 +190,10 @@ if (request.getParameterMap().isEmpty()) {
 	String welcomeMsg = "<br>%%CONFNAME%% へようこそ！<br><br>この会議の音声ブリッジに参加するには、左上隅のヘッドセット・アイコンをクリックしてください<b>（マイク・アイコンであなたの音声をミュートすることもできます）</b>。<br><br>この会議はレコードされます。";
 	// String welcomeMsg = "<br>Welcome to %%CONFNAME%%!<br><br>For help see our <a href=\"event:http://www.bigbluebutton.org/content/videos\"><u>tutorial videos</u></a>.<br><br>To join the voice bridge for this meeting click the headset icon in the upper-left <b>(you can mute yourself in the Listeners window)</b>.<br><br>This meeting is being recorded.";
 	String joinURL = getJoinURL(username, meetingID, "true", welcomeMsg, metadata, null);
-	if (joinURL.startsWith("http://")) {
+
+	// classcat : 21-may-16
+	if (joinURL.startsWith("http://") || joinURL.startsWith("https://")) { 
+	// if (joinURL.startsWith("http://")) {
 %>
 <script language="javascript" type="text/javascript">
   window.location.href="<%=joinURL%>";
