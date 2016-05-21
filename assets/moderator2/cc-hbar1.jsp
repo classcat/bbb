@@ -33,7 +33,9 @@ div#menu1 a {
 <a href="/moderator.html">モデレータ・トップページ</a>
 &nbsp;&nbsp;
 
-<a href="http://cute.classcat.com/index.php/webcon-moderator-guide.html" target="_blank">Guide</a>
+<!-- 21-may-16 : changed. -->
+<a href="http://www.classcat.com/products/telework-2/webconference/webconf-mguide-overview/" target="_blank">Guide</a>
+<!-- <a href="http://cute.classcat.com/index.php/webcon-moderator-guide.html" target="_blank">Guide</a> -->
 &nbsp;&nbsp;
 
 <input type="button" id="btn_about" value="About"/>
