@@ -66,9 +66,9 @@ ClassCat<sup><small>&reg;</small></sup> WebConference v1.0
 </div>
 
 <div align="center" style="font-family:'Times New Roman',serif; font-weight:bold; font-style:italic;">
-<span style="font-size:10pt; color:#6f6;">0.9.1 release</span>
+<span style="font-size:10pt; color:#6f6;">1.0.0 release</span>
 &nbsp;
-<span style="font-size:9pt;color:#999">12-Feb-15 build</span>
+<span style="font-size:9pt;color:#999">22-May-16 build</span>
 </div>
 
 <br/>
@@ -79,7 +79,7 @@ ClassCat<sup><small>&reg;</small></sup> WebConference v1.0
 </div>
 
 <div align="right" style="margin-top:4px;font-family:'Times New Roman',serif; font-size:8pt; color:#999;">
-Copyright &copy; 2015 ClassCat&reg; Co.,Ltd. All rights reserved. 
+Copyright &copy; 2016 ClassCat&reg; Co.,Ltd. All rights reserved. 
 </div>
 
 </div>
